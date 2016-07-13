@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <p id="date"></p>
+    <script>
+        var d = new Date();
+//        d.setDate(d.getDate() + 1);
+//        d.setMonth(d.getMonth() + 1 ); // räknar månader 0-11
+        document.getElementById('date').innerHTML = (d.getDate() + 1) + "/" + (d.getMonth() + 1) + "-" + d.getFullYear();
+
+
+
+    </script>
+
+
+    <textarea>
+
+
+    </textarea>
+</body>
+</html>
