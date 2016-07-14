@@ -3,24 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
 </head>
 <body>
+
+<!--Uppgift 1 javascript-->
+<div>
+    <h4>Uppgift 1 javascript</h4>
     <p id="date"></p>
+
     <script>
         var d = new Date();
-//        d.setDate(d.getDate() + 1);
-//        d.setMonth(d.getMonth() + 1 ); // räknar månader 0-11
         document.getElementById('date').innerHTML = (d.getDate() + 1) + "/" + (d.getMonth() + 1) + "-" + d.getFullYear();
-
-
-
     </script>
 
+</div>
 
-    <textarea>
+<!--Testar lite funktioner-->
+<div>
+    <h4>Testar några javascript-funktioner</h4>
+    <p id="demo">JavaScript can hide HTML elements.</p>
 
+    <!--Makes object with id "demo" invisible-->
+    <button type="button" onclick="document.getElementById('demo').style.visibility='hidden'">Make invisible</button>
+    <!--Removes object with id "none"-->
+    <button type="button" onclick="document.getElementById('demo').style.display='none'">Remove</button>
+    <!--Makes object with id "demo" appear (if it already exist of course-->
+    <button type="button" onclick="document.getElementById('demo').style.display='block'">Bring back</button>
+    <!--Makes object with id "demo" visible-->
+    <button type="button" onclick="document.getElementById('demo').style.visibility='visible'">Make visible</button>
+</div>
 
-    </textarea>
+<!--Uppgift 2 javascript-->
+<div>
+    <script>
+        function myFunction() {
+            document.getElementById('myP').innerHTML = document.getElementById('text-update').value;
+        }
+    </script>
+
+    <h4>Uppgift 2 javascript</h4>
+        <!--<textarea id="text-update" onblur="myFunction()"></textarea>-->
+        <input id="text-update" onblur="myFunction()">
+    <p id="myP"></p>
+</div>
+
+<!--Uppgift 3 javascript-->
+<div>
+    <input id="text_1" type="text" onkeydown ="revFunction(id)" />
+    <input id="text_2" type="text" onkeydown ="revFunction(id)" />
+    <script>
+        function revFunction(id) {
+            if (id == "text_1")
+                document.getElementById('text_2').value = reverse(document.getElementById('text_1').value);
+            else
+                document.getElementById('text_1').value = reverse(document.getElementById('text_2').value);
+        }
+        function reverse(s) {
+            return s.split('').reverse().join('');
+        }
+    </script>
+
+</div>
+
 </body>
 </html>
