@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -21,7 +21,7 @@
 <!--Testar lite funktioner-->
 <div>
     <h4>Testar några javascript-funktioner</h4>
-    <p id="demo">JavaScript can hide HTML elements.</p>
+    <p id="demo" style="color:darkblue">JavaScript can hide, unhide, remove and bring back HTML elements. <br />Use buttons below to test this</p>
 
     <!--Makes object with id "demo" invisible-->
     <button type="button" onclick="document.getElementById('demo').style.visibility='hidden'">Make invisible</button>
@@ -49,8 +49,11 @@
 
 <!--Uppgift 3 javascript-->
 <div>
-    <input id="text_1" type="text" onkeydown ="revFunction(id)" />
-    <input id="text_2" type="text" onkeydown ="revFunction(id)" />
+    <h4>Uppgift 3 javascript</h4>
+
+
+    <input id="text_1" type="text" onkeyup ="revFunction(id)" />
+    <input id="text_2" type="text" onkeyup ="revFunction(id)" />
     <script>
         function revFunction(id) {
             if (id == "text_1")
@@ -65,5 +68,18 @@
 
 </div>
 
+<!--Uppgift 4 javascript-->
+<div>
+
+    <h4>Uppgift 4 javascript</h4>
+
+    <select id="names" />
+
+    <script>
+        function populateDropdown() {
+
+        }
+    </script>
+</div>
 </body>
 </html>
